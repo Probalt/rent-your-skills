@@ -38,14 +38,6 @@
     <%= @course.date %>
   </p>
 
-  <%= link_to 'Edit', edit_owner_course_path(@course) %>
+  <%= link_to 'Edit', edit_owner_course_path(@course) %> |
   <%= link_to 'Delete', owner_course_path(@course), method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
-
-<p>
-  <strong>Course name:</strong>
-  <%= @course.title %>
-</p>
-
-<%= link_to 'Edit', edit_owner_course_path(@course) %> |
-<%= link_to 'Delete', owner_course_path(@course), method: :delete, data: { confirm: 'Are you sure?' } %>
