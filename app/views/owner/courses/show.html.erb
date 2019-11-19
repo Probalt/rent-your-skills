@@ -1,0 +1,43 @@
+<div class="container">
+  <p>
+    <%= image_tag "https://kitt.lewagon.com/placeholder/users/Artmen12", class: "avatar" %>
+    <strong>Your email:</strong>
+    <%= @course.user.email %>
+  </p>
+
+  <p>
+    <h1 class="text-center"> <%= @course.title %> </h1>
+  </p>
+
+  <div>
+    <%= image_tag "https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg" %>
+  </div>
+  <br>
+  <p>
+    <strong>Description:</strong>
+    <%= @course.description %>
+  </p>
+
+  <p>
+    <strong>Duration:</strong>
+    <%= @course.duration %> min
+  </p>
+
+  <p>
+    <strong>Address:</strong>
+    <%= @course.location %>
+  </p>
+
+  <p>
+    <strong>Price:</strong>
+    <%= @course.price %> €
+  </p>
+
+  <p>
+    <strong>When </strong>
+    <%= @course.date %>
+  </p>
+
+  <%= link_to 'Edit', edit_owner_course_path(@course) %> |
+<%= link_to 'Delete', owner_course_path(@course), method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
