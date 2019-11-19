@@ -1,1 +1,26 @@
 // Specific CSS for your home-page
+body {
+  font-family: 'Roboto', sans-serif;
+  h2 {
+    font-weight: bold;
+    color: white;
+  }
+}
+
+.banner {
+  background-image: url(image_path('camera.jpg'));
+  height: 700px;
+  background-size: cover;
+  transform: scaleX(-1);
+  margin-top: -15px;
+
+}
+
+.find-courses {
+  background-image: url(image_path('skate.jpg'));
+  background-size: cover;
+  border-radius: 10px;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-position: 0px;
+}

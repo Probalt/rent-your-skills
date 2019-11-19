@@ -1,6 +1,5 @@
 .navbar {
-  justify-content: space-between;
-  background: white;
+  background-color: white;
 }
 
 .navbar .navbar-collapse {
@@ -8,5 +7,11 @@
 }
 
 .navbar .navbar-brand img {
-  width: 40px;
+  width: 200px;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
