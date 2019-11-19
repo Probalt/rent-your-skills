@@ -2,7 +2,7 @@ class Owner::CoursesController < ApplicationController
   def index
     @courses = current_user.courses
   end
-  
+
   def new
     user = current_user
     @course = Course.new
@@ -13,7 +13,7 @@ class Owner::CoursesController < ApplicationController
     @course.save
     redirect_to owner_courses_path(@course.id)
   end
-  
+
   def edit
     @course = Course.find(params['id'])
   end
@@ -37,6 +37,6 @@ class Owner::CoursesController < ApplicationController
   private
 
   def course_params
-    params.require(:course).permit(:title, :description, :price, :duration, :location, :date, :user_id
+    params.require(:course).permit(:title, :description, :price, :duration, :location, :date, :user_id)
   end
 end
