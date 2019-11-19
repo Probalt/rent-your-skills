@@ -1,0 +1,19 @@
+<div class="d-flex owner-dashboard">
+  <div class="sidebar col-3 bg-black mr-2">
+    <%= image_tag "https://gal.img.pmdstatic.net/fit/http.3A.2F.2Fprd2-bone-image.2Es3-website-eu-west-1.2Eamazonaws.2Ecom.2Fgal.2F2018.2F10.2F11.2F28a8ea00-4ae0-4229-ba88-608dea97f49d.2Ejpeg/480x480/quality/80/michel-drucker-un-hommage-national-a-sa-mort-son-etonnante-reponse.jpg" %>
+    <h3> Michel</h3>
+  </div>
+  <div class="info-content pl-2 pr-2">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1522204538344-922f76ecc041?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80)">
+      <h1>Tous mes cours</h1>
+    </div>
+    <div class="cards">
+      <% @courses.each do |course| %>
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1496886077455-6e206da90837?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
+          <h2><%= course.title %></h2>
+        </div>
+      <% end %>
+      <%= link_to "Ajouter un cours", new_owner_course_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>
