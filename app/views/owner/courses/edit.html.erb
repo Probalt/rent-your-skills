@@ -1,1 +1,15 @@
-<h1><%= @course.title %></h1>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <h1>Edit your course</h1>
+      <%= simple_form_for @course do |c| %>
+        <%= c.input :title %>
+        <%= c.input :description %>
+        <%= c.input :duration %>
+        <%= c.input :date %>
+        <%= c.input :price %>
+        <%= c.submit class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
