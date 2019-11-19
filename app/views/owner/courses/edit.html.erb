@@ -1,14 +1,15 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1>Edit your course</h1>
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="forms col-xs-12 col-sm-10 col-sm-offset-1 rounded p-5 bg-white mb-5">
+      <h1 class="">Ajouter un cours</h1>
+      <hr class="line-form mb-5">
       <%= simple_form_for [:owner, @course] do |c| %>
-        <%= c.input :title %>
-        <%= c.input :description %>
-        <%= c.input :duration %>
+        <%= c.input :title, placeholder: 'Cours de sabre laser' %>
+        <%= c.input :description, as: :text, placeholder: 'Formé auprès de maitre Obiwan lui même, je vous propose mes services...'  %>
+        <%= c.input :duration%>
         <%= c.input :date %>
         <%= c.input :price %>
-        <%= c.submit class: 'btn btn-primary' %>
+        <%= c.submit class: 'btn btn-primary form-button mt-2' %>
       <% end %>
     </div>
   </div>
