@@ -6,7 +6,7 @@ class Owner::CoursesController < ApplicationController
   end
 
   def new
-    user = current_user
+    @user = current_user
     @course = Course.new
   end
 
