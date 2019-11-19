@@ -2,3 +2,6 @@
 <% @courses.each do |course| %>
   <h2><%= course.title %></h2>
 <% end %>
+
+<%= link_to "Ajouter un cours", new_owner_course_path, class: 'btn btn-primary' %>
+
