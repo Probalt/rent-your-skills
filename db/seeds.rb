@@ -7,13 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts 'Cleaning database...'
+User.destroy_all
 Course.destroy_all
 
-joe = User.create!(email: "joe@joe.com", password: "azerty")
+puts 'Creating user joe'
+User.create!(email: "joe@gmail.com", password: "azerty")
 
 puts 'Creating courses...'
-skate = Course.create!(title: 'Cours de skate', description: 'Je compte faire deux heures de skate dimanche sur les quais et je propose de donner des cours pendant 1h', price: 3, duration: 60, location: 'Bordeaux, Quais des Chartrons', date: Time.now )
-cook = Course.create!(title: 'Cours de cuisine', description: 'Propose une initiation à la cuisin moléculaire', price: 4, duration: 120, location: 'Bordeaux, Quai Richelieu', date: Time.now )
-vaisselle = Course.create!(title: 'Faire sa propre lessive', description: 'Je vais faire ma lessive du mois, je vous propose de vous apprendre par la même occasion comment faire', price: 2, duration: 30, location: 'Bordeaux, Rue Sainte-Catherine', date: Time.now )
+Course.create!(title: 'Cours de skate', description: 'Je compte faire deux heures de skate dimanche sur les quais et je propose de donner des cours pendant 1h', price: 3, duration: 60, location: 'Bordeaux, Quais des Chartrons', date: Time.now, user_id: 1 )
+Course.create!(title: 'Cours de cuisine', description: 'Propose une initiation à la cuisin moléculaire', price: 4, duration: 120, location: 'Bordeaux, Quai Richelieu', date: Time.now, user_id: 1 )
+Course.create!(title: 'Faire sa propre lessive', description: 'Je vais faire ma lessive du mois, je vous propose de vous apprendre par la même occasion comment faire', price: 2, duration: 30, location: 'Bordeaux, Rue Sainte-Catherine', date: Time.now, user_id: 1 )
 
 puts 'Finished!'
