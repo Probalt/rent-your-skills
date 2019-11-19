@@ -17,11 +17,12 @@ class Owner::CoursesController < ApplicationController
   end
 
   def edit
+    @user = current_user
   end
 
   def update
     @course.update(course_params)
-    redirect_to ownr_course_path(@course.id)
+    redirect_to owner_course_path(@course.id)
   end
 
   def show
