@@ -1,4 +1,8 @@
 class Owner::CoursesController < ApplicationController
+  def index
+    @courses = current_user.courses
+  end
+  
   def new
     user = current_user
     @course = Course.new
