@@ -9,6 +9,8 @@
 puts 'Cleaning database...'
 Course.destroy_all
 
+joe = User.create!(email: "joe@joe.com", password: "azerty")
+
 puts 'Creating courses...'
 skate = Course.create!(title: 'Cours de skate', description: 'Je compte faire deux heures de skate dimanche sur les quais et je propose de donner des cours pendant 1h', price: 3, duration: 60, location: 'Bordeaux, Quais des Chartrons', date: Time.now )
 cook = Course.create!(title: 'Cours de cuisine', description: 'Propose une initiation à la cuisin moléculaire', price: 4, duration: 120, location: 'Bordeaux, Quai Richelieu', date: Time.now )
