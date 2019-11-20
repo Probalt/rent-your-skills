@@ -18,12 +18,12 @@ class BookingsController < ApplicationController
     @course = Course.find(params[:course_id])
     @booking = Booking.new(user: @user, course: @course)
     @booking.save
-    redirect_to course_bookings_path
+    redirect_to bookings_path
   end
 
   def destroy
     @booking = Booking.find(params[:id])
-    @boooking.destroy
-    redirect_to course_bookings_path(@course)
+    @booking.destroy
+    redirect_to bookings_path
   end
 end
