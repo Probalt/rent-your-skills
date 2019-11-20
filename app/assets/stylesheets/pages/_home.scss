@@ -7,20 +7,27 @@ body {
   }
 }
 
-.banner {
-  background-image: url(image_path('camera.jpg'));
-  height: 700px;
+.home-image {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(100, 100, 100, 0.5)), url(image_path('funky.jpg'));
   background-size: cover;
-  transform: scaleX(-1);
-  margin-top: -15px;
-
+  width: 1000px;
+  height: 1000px;
 }
 
-.find-courses {
-  background-image: url(image_path('skate.jpg'));
-  background-size: cover;
-  border-radius: 10px;
-  height: 300px;
-  background-repeat: no-repeat;
-  background-position: 0px;
+.card-title {
+  a {
+  color: white;
+  font-size: 50px;
+  font-weight: lighter;
+  padding: 20px;
+  border: solid white;
+  }
+  a:hover {
+  color: white;
+  font-size: 50px;
+  font-weight: bolder;
+  padding: 20px;
+  border: solid white;
+  text-decoration: none;
+  }
 }
