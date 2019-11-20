@@ -1,0 +1,15 @@
+<h1>All your bookings</h1>
+
+<div class="d-flex owner-dashboard">
+  <div class="info-content pl-2 pr-2">
+    <div class="cards">
+      <% @bookings.each do |booking| %>
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1537476102677-80bac0ab1d8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80)">
+        <%= link_to course_booking_path(booking, booking.course) do %>
+          <h2><%= booking.course.title %></h2>
+        <% end %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
