@@ -11,9 +11,11 @@ class Owner::CoursesController < ApplicationController
   end
 
   def create
+    @user = current_user
     @course = Course.new(course_params)
+    @course.user_id = @user.id
     @course.save
-    redirect_to owner_courses_path(@course.id)
+    redirect_to owner_courses_path
   end
 
   def edit
@@ -40,6 +42,6 @@ class Owner::CoursesController < ApplicationController
   end
 
   def course_params
-    params.require(:course).permit(:title, :description, :price, :duration, :location, :date, :user_id)
+    params.require(:course).permit(:title, :description, :price, :duration, :location, :date)
   end
 end
