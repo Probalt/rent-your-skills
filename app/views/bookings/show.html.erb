@@ -42,8 +42,12 @@
     <%= @booking.course.date %>
   </p>
 
-
-  <%= link_to booking_path(@booking), method: :delete, data: { confirm: 'Are you sure?' } do %>
-    <i class="fas fa-trash-alt"></i>
+  <%= link_to courses_path, :class => "btn p-3 mr-3 mb-4 form-button btn-secondary" do %>
+  <i class="fas fa-long-arrow-alt-left"> Back</i>
   <% end %>
+
+  <%= link_to courses_path, :class => "btn p-3 mr-3 mb-4 form-button btn-danger" do %>
+  <i class="fas fa-trash-alt"> Delete</i>
+  <% end %>
+
 </div>
