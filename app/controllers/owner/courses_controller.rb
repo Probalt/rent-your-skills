@@ -14,8 +14,11 @@ class Owner::CoursesController < ApplicationController
     @user = current_user
     @course = Course.new(course_params)
     @course.user_id = @user.id
-    @course.save
-    redirect_to owner_courses_path
+    if @course.save!
+      redirect_to owner_courses_path
+    else
+      render :new
+    end
   end
 
   def edit
@@ -42,6 +45,6 @@ class Owner::CoursesController < ApplicationController
   end
 
   def course_params
-    params.require(:course).permit(:title, :description, :price, :duration, :location, :date)
+    params.require(:course).permit(:title, :description, :price, :duration, :location, :date, :image_url)
   end
 end
