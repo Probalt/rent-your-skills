@@ -1,6 +1,6 @@
 class Course < ApplicationRecord
   belongs_to :user
-  has_many :bookings
+  has_many :bookings, dependent: :destroy
   validates :title, presence: true, allow_blank: false
   validates :description, presence: true, allow_blank: false
   validates :price, presence: true, allow_blank: false
