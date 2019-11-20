@@ -10,7 +10,7 @@ body {
 .home-image {
   background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(100, 100, 100, 0.5)), url(image_path('layout.jpg'));
   background-size: cover;
-  height: 700px;
+  height: 100vh;
 }
 
 .card-title {
