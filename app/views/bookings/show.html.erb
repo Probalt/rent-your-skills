@@ -1,0 +1,49 @@
+<div class="container">
+  <p>
+    <%= image_tag "https://kitt.lewagon.com/placeholder/users/Artmen12", class: "avatar" %>
+    <%= @booking.user.username %>
+  </p>
+
+  <p>
+    <h1 class="text-center"> <%= @Your booking %> </h1>
+  </p>
+
+  <div>
+    <%= image_tag "https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg" %>
+  </div>
+  <br>
+
+  <p>
+    <%= @booking.course.title %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @booking.course.description %>
+  </p>
+
+  <p>
+    <strong>Duration:</strong>
+    <%= @booking.course.duration %> min
+  </p>
+
+  <p>
+    <strong>Address:</strong>
+    <%= @booking.course.location %>
+  </p>
+
+  <p>
+    <strong>Price:</strong>
+    <%= @booking.course.price %> €
+  </p>
+
+  <p>
+    <strong>When </strong>
+    <%= @booking.course.date %>
+  </p>
+
+
+  <%= link_to booking_path(@booking), method: :delete, data: { confirm: 'Are you sure?' } do %>
+    <i class="fas fa-trash-alt"></i>
+  <% end %>
+</div>
