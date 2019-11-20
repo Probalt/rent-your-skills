@@ -1,17 +1,51 @@
-<div class="container">
-  <p>
-    <%= image_tag "https://kitt.lewagon.com/placeholder/users/Artmen12", class: "avatar" %>
-    <strong>Your email:</strong>
-    <%= @course.user.email %>
-  </p>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-5">
+      <%= image_tag "https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg", class: "course-img" %>
+    </div>
+    <div class="col-md-7">
+      <h1 class="text-center"> <%= @course.title %> </h1>
+      <p>
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/Artmen12", class: "avatar" %>
+        <strong>Organisé par</strong>
+        <%= @course.user.username %>
+      </p>
+      <p>
+        <strong>Description:</strong>
+        <%= @course.description %>
+      </p>
 
-  <p>
-    <h1 class="text-center"> <%= @course.title %> </h1>
-  </p>
+      <p>
+        <strong>Duration:</strong>
+        <%= @course.duration %> min
+      </p>
 
-  <div>
-    <%= image_tag "https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg" %>
+      <p>
+        <strong>Address:</strong>
+        <%= @course.location %>
+      </p>
+
+      <p>
+        <strong>Price per person:</strong>
+        <%= @course.price %> €
+      </p>
+
+      <p>
+        <strong>When </strong>
+        <%= @course.date %>
+      </p>
+
+      <%= link_to edit_owner_course_path(@course) do %>
+        <i class="fas fa-pencil-alt"></i>
+      <% end %> |
+
+      <%= link_to owner_course_path(@course), method: :delete, data: { confirm: 'Are you sure?' } do %>
+        <i class="fas fa-trash-alt"></i>
+      <% end %>
+      </div>
+    </div>
   </div>
+
   <br>
   <p>
     <strong>Description:</strong>
@@ -49,4 +83,5 @@
   <%= link_to owner_courses_path, :class => "btn p-3 mr-3 mb-4 form-button btn-secondary" do %>
     <i class="fas fa-long-arrow-alt-left"> Back</i>
   <% end %>
+
 </div>
