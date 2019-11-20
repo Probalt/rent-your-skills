@@ -1,0 +1,13 @@
+.button {
+  background-color: transparent;
+  border: 2px solid $blue-water;
+  color: $blue-water;
+  width: 200px;
+  height: 50px;
+
+  &:hover {
+   background-color: $blue-water;
+   color: white;
+   border: $blue-water;
+  }
+}
