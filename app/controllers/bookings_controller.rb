@@ -7,6 +7,6 @@ end
 def destroy
   @booking = Booking.find(params[:id])
   @boooking.destroy
-  redirect_to course_bookings_path
+  redirect_to course_bookings_path(@course)
 end
 end
