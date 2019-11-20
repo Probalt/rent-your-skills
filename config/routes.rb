@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :courses
   end
   resources :courses, only: [:index, :show] do
-    resources :bookings, only: [:create, :index, :show]
+    resources :bookings, only: [:create, :show]
   end
-  resources :bookings, only: [:destroy]
+  resources :bookings, only: [:destroy, :index]
 end
