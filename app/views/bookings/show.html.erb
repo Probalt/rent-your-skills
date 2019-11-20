@@ -48,4 +48,42 @@
       <% end %>
     </div>
   </div>
+  <br>
+
+  <p>
+    <%= @booking.course.title %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= @booking.course.description %>
+  </p>
+
+  <p>
+    <strong>Duration:</strong>
+    <%= @booking.course.duration %> min
+  </p>
+
+  <p>
+    <strong>Address:</strong>
+    <%= @booking.course.location %>
+  </p>
+
+  <p>
+    <strong>Price:</strong>
+    <%= @booking.course.price %> €
+  </p>
+
+  <p>
+    <strong>When </strong>
+    <%= @booking.course.date %>
+  </p>
+
+  <%= link_to bookings_path, :class => "btn p-3 mr-3 mb-4 form-button btn-secondary" do %>
+  <i class="fas fa-long-arrow-alt-left"> Back</i>
+  <% end %>
+
+  <%= link_to courses_path, :class => "btn p-3 mr-3 mb-4 form-button btn-danger" do %>
+  <i class="fas fa-trash-alt"> Delete</i>
+  <% end %>
 </div>
