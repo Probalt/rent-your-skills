@@ -5,8 +5,13 @@ class BookingsController < ApplicationController
   end
 
   def show
-    @course = Course.find(params[:course_id])
+    @course = Course.geocoded.find(params[:id])
     @booking = Booking.find(params[:id])
+    @markers = [{
+      lat: @course.latitude,
+      lng: @course.longitude,
+      image_url: helpers.asset_url('pin.png')
+    }]
     @user = current_user
   end
 

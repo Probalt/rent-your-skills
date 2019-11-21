@@ -12,6 +12,6 @@ User.destroy_all
 Course.destroy_all
 
 puts 'Creating user joe'
-User.create!(email: "joe@gmail.com", password: "azerty", username: "toto", avatar: "https://img.icons8.com/color/1600/avatar.png")
+User.create!(email: "joe@gmail.com", password: "azerty", username: "jojo", avatar: "https://img.icons8.com/color/1600/avatar.png")
 
 puts 'Finished!'

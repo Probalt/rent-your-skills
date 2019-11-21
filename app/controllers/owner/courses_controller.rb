@@ -47,6 +47,6 @@ class Owner::CoursesController < ApplicationController
   end
 
   def course_params
-    params.require(:course).permit(:title, :description, :price, :duration, :location, :date, :photo)
+    params.require(:course).permit(:title, :description, :price, :duration, :address, :date, :photo)
   end
 end
