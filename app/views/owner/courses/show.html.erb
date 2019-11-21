@@ -37,7 +37,11 @@
 
       <p>
         <strong>Available places:</strong>
-        <%= @course.participants - @course.bookings.length %>
+        <% if @course.participants == nil %>
+          <%= 0 - @course.bookings.length %>
+        <% else %>
+          <%= @course.participants - @course.bookings.length %>
+        <% end %>
       </p>
 
       <p>
