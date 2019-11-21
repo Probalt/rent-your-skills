@@ -8,7 +8,7 @@ class CoursesController < ApplicationController
         lat: course.latitude,
         lng: course.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { course: course }),
-        image_url: helpers.asset_url('pin.png')
+        photo: helpers.asset_url('pin.png')
       }
     end
   end
@@ -18,14 +18,9 @@ class CoursesController < ApplicationController
     @markers = [{
       lat: @course.latitude,
       lng: @course.longitude,
-      image_url: helpers.asset_url('pin.png')
+      photo: helpers.asset_url('pin.png')
     }]
     @courses = Course.all
-    @user = current_user
-  end
-
-  def show
-    @course = Course.find(params[:id])
     @user = current_user
   end
 end
