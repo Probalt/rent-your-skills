@@ -3,6 +3,8 @@ body {
   font-family: 'Roboto', sans-serif;
   h2 {
     font-weight: bold;
+    color: $grey;
+    margin: 0;
   }
 }
 
@@ -30,3 +32,6 @@ body {
   }
 }
 
+.contenu {
+  min-height: 600px;
+}
