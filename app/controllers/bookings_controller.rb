@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   def index
-    @bookings = Booking.all
+    @bookings = current_user.bookings
+    @user = current_user
   end
 
   def show
@@ -11,6 +12,7 @@ class BookingsController < ApplicationController
       lng: @course.longitude,
       image_url: helpers.asset_url('pin.png')
     }]
+    @user = current_user
   end
 
   def new
