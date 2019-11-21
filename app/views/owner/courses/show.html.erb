@@ -1,7 +1,7 @@
 <div class="container mt-5">
   <div class="row">
     <div class="col-md-5">
-      <%= image_tag "https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg", class: "course-img" %>
+      <%= cl_image_tag @course.photo, crop: :fit, class: "course-img" %>
     </div>
     <div class="col-md-7">
       <h1 class="text-center"> <%= @course.title %> </h1>
@@ -22,7 +22,7 @@
 
       <p>
         <strong>Address:</strong>
-        <%= @course.location %>
+        <%= @course.address %>
       </p>
 
       <p>
@@ -38,7 +38,7 @@
       <p>
         <strong>Available places:</strong>
         <% if @course.participants == nil %>
-          <%= 0 - @course.bookings.length %>
+          <%= 0 %>
         <% else %>
           <%= @course.participants - @course.bookings.length %>
         <% end %>

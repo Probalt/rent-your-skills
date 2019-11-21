@@ -6,7 +6,7 @@
         <%= @booking.user.username %>
       </p>
       <div>
-        <%= image_tag "https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg", class: "course-img" %>
+        <%= cl_image_tag @booking.course.photo, crop: :fit, class: "course-img" %>
       </div>
     </div>
     <div class="col-md-7">
@@ -29,8 +29,14 @@
 
       <p>
         <strong>Address:</strong>
-        <%= @booking.course.location %>
+        <%= @booking.course.address %>
       </p>
+
+      <div id="map"
+           style="width: 50%; height: 200px;"
+           data-markers="<%= @markers.to_json %>"
+           data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
 
       <p>
         <strong>Price:</strong>

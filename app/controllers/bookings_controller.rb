@@ -1,13 +1,18 @@
 class BookingsController < ApplicationController
   def index
-    @bookings = current_user.bookings
     @user = current_user
+    @bookings = current_user.bookings
   end
 
   def show
-    @course = Course.find(params[:course_id])
-    @booking = Booking.find(params[:id])
     @user = current_user
+    @booking = Booking.find(params[:id])
+    @course = Course.geocoded.find(params[:course_id])
+    @markers = [{
+      lat: @course.latitude,
+      lng: @course.longitude,
+      photo: helpers.asset_url('pin.png')
+    }]
   end
 
   def new
