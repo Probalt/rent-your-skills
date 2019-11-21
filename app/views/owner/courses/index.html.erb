@@ -9,10 +9,11 @@
     </div>
     <div class="cards">
       <% @courses.each do |course| %>
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= course.image_url %>)">
-          <%= link_to owner_course_path(course) do %>
-            <h2><%= course.title %></h2>
-          <% end %>
+      <div class="card-courses" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
+        <%= cl_image_tag course.photo, crop: :fit %>
+        <%= link_to owner_course_path(course) do %>
+          <h2><%= course.title %></h2>
+        <% end %>
         </div>
       <% end %>
 
