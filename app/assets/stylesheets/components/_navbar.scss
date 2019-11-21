@@ -1,6 +1,10 @@
-.navbar {
+.navbar-skills {
   background-color: white;
+  transition: 0.5s background-color ease;
+  height: 80px;
 }
+
+
 
 .navbar .navbar-collapse {
   flex-grow: 0;

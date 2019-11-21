@@ -1,11 +1,13 @@
 class BookingsController < ApplicationController
   def index
     @bookings = current_user.bookings
+    @user = current_user
   end
 
   def show
     @course = Course.find(params[:course_id])
     @booking = Booking.find(params[:id])
+    @user = current_user
   end
 
   def new
