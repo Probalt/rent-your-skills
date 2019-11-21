@@ -31,6 +31,16 @@
       </p>
 
       <p>
+        <strong>Number of participants:</strong>
+        <%= @course.participants %>
+      </p>
+
+      <p>
+        <strong>Available places:</strong>
+        <%= @course.participants - @course.bookings.length %>
+      </p>
+
+      <p>
         <strong>When </strong>
         <%= @course.date %>
       </p>
