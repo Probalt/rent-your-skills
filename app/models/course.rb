@@ -8,5 +8,4 @@ class Course < ApplicationRecord
   validates :location, presence: true, allow_blank: false
   validates :date, presence: true, allow_blank: false
   mount_uploader :photo, PhotoUploader
-  validates :photo, presence: true
 end
