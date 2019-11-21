@@ -7,11 +7,13 @@
   <div class="info-content pl-2 pr-2">
     <div class="cards">
       <% @courses.each do |course| %>
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= course.image_url %>">
-          <%= link_to course_path(course) do %>
-            <h2><%= course.title %></h2>
-          <% end %>
+        <% if (course.participants - course.bookings.length) != 0 %>
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= course.image_url %>">
+            <%= link_to course_path(course) do %>
+              <h2><%= course.title %></h2>
+            <% end %>
         </div>
+        <% end %>
       <% end %>
     </div>
   </div>
