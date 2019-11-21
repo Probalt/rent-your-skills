@@ -3,6 +3,7 @@ class Owner::CoursesController < ApplicationController
 
   def index
     @courses = current_user.courses
+    @user = current_user
   end
 
   def new
@@ -14,7 +15,7 @@ class Owner::CoursesController < ApplicationController
     @user = current_user
     @course = Course.new(course_params)
     @course.user_id = @user.id
-    if @course.save!
+    if @course.save
       redirect_to owner_courses_path
     else
       render :new
@@ -31,6 +32,7 @@ class Owner::CoursesController < ApplicationController
   end
 
   def show
+    @user = current_user
   end
 
   def destroy

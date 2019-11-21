@@ -31,6 +31,11 @@
       </p>
 
       <p>
+        <strong>Available places:</strong>
+        <%= @course.participants - @course.bookings.length %>
+      </p>
+
+      <p>
         <strong>Price per person:</strong>
         <%= @course.price %> €
       </p>
@@ -41,21 +46,22 @@
       </p>
 
       <% if @course.bookings == [] %>
-        <%= link_to "I want to participate !", course_bookings_path(@course), method: :post, :class => "btn btn-primary form-button p-3" %>
+        <%= link_to "I want to participate !", course_bookings_path(@course), method: :post, :class => "btn btn-primary button p-3" %>
       <% else %>
         <% @course.bookings.each do |booking| %>
           <% if booking.user != current_user %>
-            <%= link_to "I want to participate !", course_bookings_path(@course), method: :post, :class => "btn btn-primary form-button p-3" %>
+            <%= link_to "I want to participate !", course_bookings_path(@course), method: :post, :class => "btn btn-primary button p-3" %>
           <% else %>
             <p>You already booked this course</p>
           <% end %>
         <% end %>
       <% end %>
-<br>
-<br>
-<%= link_to courses_path, :class => "btn p-3 mr-3 mb-4 form-button btn-secondary" do %>
-  <i class="fas fa-long-arrow-alt-left"> Back</i>
-<% end %>
+
+      <br>
+      <br>
+      <%= link_to courses_path, :class => "btn p-3 mr-3 mb-4 button btn-secondary" do %>
+        <i class="fas fa-long-arrow-alt-left"> Back</i>
+      <% end %>
     </div>
   </div>
 </div>
