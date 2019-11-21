@@ -1,6 +1,6 @@
 <div class="pop-up-container">
   <%= link_to course_path(course) do %>
-    <%= image_tag course.image_url %>
+    <%= cl_image_tag course.photo %>
   <% end %>
   <div class="pop-up-info">
   <h3><%= course.title %></h3>
