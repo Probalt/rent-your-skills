@@ -4,7 +4,7 @@
   grid-gap: 5px;
 }
 
-.card {
+.card-courses {
     background-size: cover;
     background-position: center;
     height: 250px;
@@ -23,6 +23,9 @@
       font-size: 12px;
       font-weight: lighter;
       text-align: center;
+     }
+     img {
+      height: inherit;
      }
 }
 
