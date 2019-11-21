@@ -33,7 +33,7 @@
       <p>
         <strong>Available places:</strong>
         <% if @course.participants == nil %>
-          <%= 0 - @course.bookings.length %>
+          <%= 0 %>
         <% else %>
           <%= @course.participants - @course.bookings.length %>
         <% end %>
