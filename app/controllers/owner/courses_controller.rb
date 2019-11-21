@@ -14,7 +14,7 @@ class Owner::CoursesController < ApplicationController
     @user = current_user
     @course = Course.new(course_params)
     @course.user_id = @user.id
-    if @course.save!
+    if @course.save
       redirect_to owner_courses_path
     else
       render :new
