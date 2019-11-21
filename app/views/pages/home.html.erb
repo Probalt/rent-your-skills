@@ -8,7 +8,16 @@
     <div class="container">
       <div class="search-block col-md-5 bg-white rounded p-4">
         <h2>Find a course !</h2>
-        <%= link_to "Find a course", courses_path, class: "btn btn-primary button" %>
+         <div class="search-bar">
+          <%= form_tag courses_path, method: :get do %>
+          <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a course aroud you" %>
+          <br>
+          <%= submit_tag "Search", class: "btn btn-primary button" %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
@@ -17,7 +26,6 @@
         <h2 class="card-title"><%= link_to 'See all courses around you', courses_path %></h2>
       </div>
     </div>
-
   </body>
 </html>
 
