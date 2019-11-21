@@ -4,7 +4,14 @@
 
   </head>
   <body>
-
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1496886077455-6e206da90837?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);">
+    <div class="container">
+      <div class="search-block col-md-5 bg-white rounded p-4">
+        <h2>Find a course !</h2>
+        <%= link_to "Find a course", courses_path, class: "btn btn-primary button" %>
+      </div>
+    </div>
+  </div>
      <div class="banner card bg-dark text-white home-image">
       <div class="card-img-overlay d-flex align-items-center justify-content-center">
         <h2 class="card-title"><%= link_to 'See all courses around you', courses_path %></h2>
