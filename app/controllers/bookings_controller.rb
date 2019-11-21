@@ -22,7 +22,6 @@ class BookingsController < ApplicationController
   end
 
   def destroy
-    byebug
     @booking = Booking.find(params[:id])
     @booking.destroy
     redirect_to bookings_path
