@@ -12,7 +12,7 @@ User.destroy_all
 Course.destroy_all
 
 puts 'Creating user joe'
-User.create!(email: "joe@gmail.com", password: "azerty", avatar: "https://img.icons8.com/color/1600/avatar.png")
+User.create!(email: "joe@gmail.com", password: "azerty", username: "toto", avatar: "https://img.icons8.com/color/1600/avatar.png")
 
 puts 'Creating courses...'
 Course.create!(title: 'Cours de skate', description: 'Je compte faire deux heures de skate dimanche sur les quais et je propose de donner des cours pendant 1h', price: 3, duration: 60, location: 'Bordeaux, Quais des Chartrons', date: Time.now, user: User.first, image_url: "https://images.unsplash.com/photo-1506411393232-79727bc447af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" )
