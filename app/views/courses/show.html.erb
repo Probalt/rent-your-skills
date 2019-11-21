@@ -41,11 +41,11 @@
       </p>
 
       <% if @course.bookings == [] %>
-        <%= link_to "I want to participate !", course_bookings_path(@course), method: :post, :class => "btn btn-primary form-button p-3" %>
+        <%= link_to "I want to participate !", course_bookings_path(@course), method: :post, :class => "btn btn-primary button p-3" %>
       <% else %>
         <% @course.bookings.each do |booking| %>
           <% if booking.user != current_user %>
-            <%= link_to "I want to participate !", course_bookings_path(@course), method: :post, :class => "btn btn-primary form-button p-3" %>
+            <%= link_to "I want to participate !", course_bookings_path(@course), method: :post, :class => "btn btn-primary button p-3" %>
           <% else %>
             <p>You already booked this course</p>
           <% end %>

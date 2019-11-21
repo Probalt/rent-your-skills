@@ -3,6 +3,7 @@ class Owner::CoursesController < ApplicationController
 
   def index
     @courses = current_user.courses
+    @user = current_user
   end
 
   def new
@@ -31,6 +32,7 @@ class Owner::CoursesController < ApplicationController
   end
 
   def show
+    @user = current_user
   end
 
   def destroy
