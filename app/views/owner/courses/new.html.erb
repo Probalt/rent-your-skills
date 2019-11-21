@@ -6,7 +6,7 @@
       <%= simple_form_for [:owner, @course] do |f| %>
         <%= f.input :title, placeholder: 'Cours de sabre laser' %>
         <%= f.input :description, as: :text, placeholder: 'Formé auprès de maitre Obiwan lui même, je vous propose mes services...'  %>
-        <%= f.input :location%>
+        <%= f.input :address %>
         <%= f.input :duration, label: "Duration (min)" %>
         <%= f.input :date %>
         <%= f.input :participants, label: "Participants max" %>
