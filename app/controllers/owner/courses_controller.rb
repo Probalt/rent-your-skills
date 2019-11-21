@@ -30,10 +30,6 @@ class Owner::CoursesController < ApplicationController
     redirect_to owner_course_path(@course.id)
   end
 
-  def course_update
-    @course.update((params[:participants]) - 1)
-  end
-
   def show
   end
 
