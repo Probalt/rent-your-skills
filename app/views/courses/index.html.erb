@@ -24,7 +24,7 @@
         <div class="info-content pl-2 pr-2">
           <div class="cards-index">
             <% @courses.each do |course| %>
-              <% if (course.participants - course.bookings.length) != 0 %>
+              <% if (course.participants.to_i - course.bookings.length) != 0 %>
                   <%= link_to course_path(course) do %>
                     <div class="card text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path course.photo, crop: :fit %>)">
                       <div class="info">
