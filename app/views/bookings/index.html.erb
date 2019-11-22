@@ -1,23 +1,24 @@
-<div class="d-flex">
-  <h1 class="flex-grow-1">All your bookings</h1>
-  <div>
-    <%= link_to courses_path, :class => "btn p-3 m-3 form-button btn-secondary" do %>
-      <i class="fas fa-long-arrow-alt-left"> Back to courses list</i>
-    <% end %>
-  </div>
-</div>
-
-<div class="d-flex owner-dashboard">
-  <div class="info-content pl-2 pr-2">
-    <div class="cards">
-      <% @bookings.each do |booking| %>
-        <%= link_to course_booking_path(booking.course, booking) do %>
-          <div class="card-courses" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path booking.course.photo, crop: :fit %>)">
-            <h2 class="text-white"><%= booking.course.title %></h2>
-          </div>
-        <% end %>
+<div class="m-3">
+  <div class="d-flex">
+    <h1 class="flex-grow-1">All your bookings</h1>
+    <div>
+      <%= link_to courses_path, :class => "btn p-3 m-3 form-button btn-secondary" do %>
+        <i class="fas fa-long-arrow-alt-left"> Back to courses list</i>
       <% end %>
     </div>
   </div>
-</div>
 
+  <div class="d-flex owner-dashboard">
+    <div class="info-content pl-2 pr-2">
+      <div class="cards">
+        <% @bookings.each do |booking| %>
+          <%= link_to course_booking_path(booking.course, booking) do %>
+            <div class="card-courses" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path booking.course.photo, crop: :fit %>)">
+              <h2 class="text-white"><%= booking.course.title %></h2>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
