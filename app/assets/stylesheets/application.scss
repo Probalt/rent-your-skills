@@ -17,3 +17,17 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+footer {
+  height: 100px;
+  background-color: $grey;
+  margin-top: 50px;
+  width: 100%;
+  li {
+    list-style-type: none;
+    a:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}

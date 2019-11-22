@@ -33,3 +33,24 @@
 .search-block {
   height: 400px;
 }
+
+.banner-small {
+  height: 300px;
+}
+
+.banner-small-content {
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+  height: 100%;
+  padding: 65px;
+  //background-position: center;
+  color: white;
+  h2 {
+    color: white;
+  }
+  .button-banner-small {
+    position: absolute;
+    bottom: 40px;
+  }
+}
