@@ -13,8 +13,7 @@
       <div class="cards">
         <% @courses.each do |course| %>
           <%= link_to owner_course_path(course) do %>
-            <div class="card-courses" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
-              <%= cl_image_tag course.photo, crop: :fit %>
+            <div class="card-courses" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path course.photo, crop: :fit %>)">
               <h2><%= course.title %></h2>
             </div>
           <% end %>
