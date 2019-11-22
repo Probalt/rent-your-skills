@@ -1,5 +1,6 @@
 <div class="contenu">
   <div class="d-flex owner-dashboard">
+
     <div class="sidebar col-2 bg-black">
       <%= image_tag @user.avatar %>
       <h3><%= @user.username %></h3>
@@ -7,14 +8,13 @@
 
     <div class="info-content w-100 pl-2 pr-2">
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1522204538344-922f76ecc041?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80)">
-        <h1>Tous mes cours</h1>
+        <h1>All my courses</h1>
       </div>
 
-      <div class="cards pt-3">
+      <div class="cards-index pt-3">
         <% @courses.each do |course| %>
           <%= link_to owner_course_path(course), class: 'd-flex justify-content-center mt-3 mb-3' do %>
            <div class="card text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= course.photo.url %>')">
-            <%=  %>
             <div class="info">
               <h1><%= course.title %></h1>
               <p> <%= course.description %></p>
@@ -22,9 +22,10 @@
            </div>
           <% end %>
         <% end %>
+
       </div>
         <div class="button-index">
-          <%= link_to "Ajouter un cours", new_owner_course_path, class: "btn btn-primary button" %>
+          <%= link_to "Add a course", new_owner_course_path, class: "btn btn-primary button" %>
           <br>
           <%= link_to "View courses list", courses_path, class: "btn btn-secondary button" %>
         </div>

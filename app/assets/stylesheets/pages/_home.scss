@@ -35,3 +35,15 @@ body {
 .contenu {
   min-height: 600px;
 }
+
+.selection-location {
+  .select-near-position {
+    font-weight: bold;
+    color: $grey;
+    margin: 0;
+  }
+  a {
+    font-size: 2rem;
+    text-decoration: none;
+  }
+}
