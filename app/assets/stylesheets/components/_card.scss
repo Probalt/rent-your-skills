@@ -37,44 +37,96 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.card-course-home  {
+// .card-course-home  {
+//   overflow: hidden;
+//   background: white;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+// }
+
+// .card-course-home  > img {
+//   height: 200px;
+//   width: 100%;
+//   object-fit: cover;
+// }
+
+// .card-course-home  h2 {
+//   font-size: 16px;
+//   font-weight: bold;
+//   margin: 0;
+// }
+
+// .card-course-home  p {
+//   font-size: 12px;
+//   opacity: .7;
+//   margin: 0;
+// }
+
+
+// .cardcourse-home p .card-course-home-infos {
+//   padding: 16px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: flex-end;
+//   position: relative;
+// }
+
+// .card-course-home-infos {
+//   position: absolute;
+//   right: 16px;
+//   top: -20px;
+//   width: 40px;
+// }
+
+.cards-home-course {
   overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 285px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  .infos-time-participants {
+    display: flex;
+    justify-content: space-between;
+  }
+  .infos-price {
+    color: $orange;
+  }
+  a {
+    text-decoration: none;
+    color: $grey;
+  }
 }
 
-.card-course-home  > img {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
+.card-home-course {
+    background: white;
+    box-shadow: 0 0 4px rgba(0,0,0,0.2);
+  .img {
+    width: 100%;
+    object-fit: cover;
+  }
+  h2 {
+    font-size: 17px;
+    font-weight: bold;
+    margin: 0;
+  }
+  p {
+    font-size: 14px;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+  .card-home-course-infos {
+    padding: 16px;
+  }
 }
 
-.card-course-home  h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.card-course-home  p {
-  font-size: 12px;
-  opacity: .7;
-  margin: 0;
-}
-
-
-.cardcourse-home p .card-course-home-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-}
-
-.card-course-home-infos {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
+.cards-last-chance {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  h2 {
+    color: white;
+  }
 }
 
 .cards {
@@ -122,6 +174,3 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-
-
-

@@ -2,11 +2,15 @@
   background-color: white;
   transition: 0.5s background-color ease;
   height: 80px;
+
 }
 
 .navbar-for-home {
   background-color: transparent;
   height: 80px;
+  .nav-link {
+    color: white;
+  }
 }
 
 .navbar .navbar-collapse {

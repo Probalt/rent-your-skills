@@ -8,14 +8,15 @@
     <div class="container">
       <div class="search-block col-md-5 bg-white rounded p-4">
         <h2>Find a course !</h2>
+        <p>Choose your interest and share it with other people near in your city.</p>
          <div class="search-bar">
-          <%= form_tag courses_path, method: :get do %>
+          <%= form_tag courses_path, class: "form-banner", method: :get do %>
           <%= text_field_tag :query,
           params[:query],
           class: "form-control",
           placeholder: "Find a course aroud you" %>
           <br>
-          <%= submit_tag "Search", class: "btn btn-primary button" %>
+          <%= submit_tag "Search", class: "btn btn-primary button button-banner" %>
           <% end %>
         </div>
       </div>
@@ -24,15 +25,49 @@
   <div class="container banner-small mt-5 col-md-10">
     <div class="banner-small-content rounded" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);">
     <h2>Find your talents and share it with others</h2>
-    <p>zdjzdjskldjsldjqsljdljzlmkj</p>
+    <p>You are skilled in a field and you would like you share</p>
+    <p>your knowledge with other people ?</p>
+    <p>This is your chance ! </p>
     <%= link_to "Know more",  new_owner_course_path, class: "btn btn-primary button button-banner-small" %>
     </div>
   </div>
+
   <div class="container selection-location col-md-10 mt-5">
-    <h2>Our selection near your position</h2>
+    <%= link_to "Our selection near your position", courses_path, class: "select-near-position" %>
+    <div class="cards-home-course mt-4">
+      <% @courses_near.each do |course_near| %>
+          <div class="card-home-course rounded">
+            <%= link_to course_path(course_near) do %>
+              <%= cl_image_tag course_near.photo, crop: :fit, class: "img" %>
+              <div class="card-home-course-infos">
+                <h2><%= course_near.title %></h2>
+                <p><strong>Bordeaux</strong></p>
+                <div class="infos-time-participants">
+                  <p><strong><%= course_near.duration %></strong></p>
+                  <p><strong class="infos-price"><%= course_near.price %>€/pers</strong></p>
+                </div>
+              </div>
+            <% end %>
+          </div>
+      <% end %>
+    </div>
   </div>
+
   <div class="container selection-location col-md-10 mt-5">
     <h2>Don't miss your chance !</h2>
+    <div class="cards-last-chance">
+      <% @courses.each do |course| %>
+        <% if (course.participants.to_i - course.bookings.length) <= 2 && (course.participants.to_i - course.bookings.length) > 0 %>
+          <div class="card-courses" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))"> <%= cl_image_tag course.photo, crop: :fit %>
+            <%= link_to course_path(course) do %>
+              <h2><%= course.title %></h2>
+            <% end %>
+          </div>
+          <% end %>
+        <% end %>
+    </div>
+  </div>
+
   </div>
   </body>
 </html>
