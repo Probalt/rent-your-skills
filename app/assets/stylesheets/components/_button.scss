@@ -12,3 +12,10 @@
    border: $blue-water;
   }
 }
+
+.button-index {
+  margin: 30px 10px 0px 10px;
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
