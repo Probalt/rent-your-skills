@@ -7,13 +7,17 @@
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1496886077455-6e206da90837?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);">
     <div class="container">
       <div class="search-block col-md-5 bg-white rounded p-4">
-        <h2>Find a course and</h2>
-        <h2>share your interests.</h2>
-        <h6>My interest</h6>
-        <h6>Where</h6>
-        <h6>When</h6>
-        <h6></h6>
-        <%= link_to "Find a course", courses_path, class: "btn btn-primary button" %>
+        <h2>Find a course !</h2>
+         <div class="search-bar">
+          <%= form_tag courses_path, method: :get do %>
+          <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a course aroud you" %>
+          <br>
+          <%= submit_tag "Search", class: "btn btn-primary button" %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
@@ -30,12 +34,6 @@
   <div class="container selection-location col-md-10 mt-5">
     <h2>Don't miss your chance !</h2>
   </div>
-<!--      <div class="banner card bg-dark text-white home-image">
-      <div class="card-img-overlay d-flex align-items-center justify-content-center">
-        <h2 class="card-title"><%= link_to 'See all courses around you', courses_path %></h2>
-      </div>
-    </div> -->
-
   </body>
 </html>
 
