@@ -7,7 +7,7 @@ class Course < ApplicationRecord
   validates :duration, presence: true, allow_blank: false
   validates :address, presence: true, allow_blank: false
   validates :date, presence: true, allow_blank: false
-  validates :participants, presence: true, allow_blank: false
+  validates :participants, presence: true
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
   mount_uploader :photo, PhotoUploader

@@ -22,6 +22,16 @@ https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-1.2.1&ixid=ey
 Course.create!(title: 'Faire sa propre lessive', description: 'Je vais faire ma lessive du mois, je vous propose de vous apprendre par la même occasion comment faire', participants: 8, price: 2, duration: 30, address: 'Bordeaux, Rue Sainte-Catherine', date: Time.now, user: User.first, photo: "https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg(123 kB)
 https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg
 " )
+Course.create!(title: 'Cours de salsa', description: 'Je propose de vous montrez les bases de la Salsa.', participants: 4, price: 2, duration: 30, address: 'Bordeaux, Rue Sainte-Catherine', date: Time.now, user: User.first, photo: "https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg(123 kB)
+https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg
+" )
+Course.create!(title: 'Cours de guitare', description: 'Apprenez les bases de la guitare.', participants: 2, price: 5, duration: 60, address: 'Bordeaux, Rue Sainte-Catherine', date: Time.now, user: User.first, photo: "https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg(123 kB)
+https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg
+" )
+Course.create!(title: 'Cours de photos', description: 'Apprendre à se servir de son reflex.', participants: 2, price: 10, duration: 65, address: 'Bordeaux, Rue Sainte-Catherine', date: Time.now, user: User.first, photo: "https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg(123 kB)
+https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg
+" )
+
 
 puts 'Finished!'
 
