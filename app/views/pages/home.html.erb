@@ -8,7 +8,7 @@
     <div class="container">
       <div class="search-block col-md-5 bg-white rounded p-4">
         <h2>Find a course !</h2>
-        <p>Choose your interest and share it with other people near in your city.</p>
+        <p>Choose your interest and share it with other people around you.</p>
          <div class="search-bar">
           <%= form_tag courses_path, class: "form-banner", method: :get do %>
           <%= text_field_tag :query,
@@ -58,8 +58,7 @@
     <div class="cards-last-chance">
       <% @courses.each do |course| %>
         <% if (course.participants.to_i - course.bookings.length) <= 2 && (course.participants.to_i - course.bookings.length) > 0 %>
-          <div class="card-courses" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))"> <%= cl_image_tag course.photo, crop: :fit %>
-            <%= link_to course_path(course) do %>
+          <div class="card-courses" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path course.photo, crop: :fit %>)">            <%= link_to course_path(course) do %>
               <h2><%= course.title %></h2>
             <% end %>
           </div>
