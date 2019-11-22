@@ -5,7 +5,6 @@
   width: 200px;
   height: 50px;
   padding-top: 10px;
-
   &:hover {
    background-color: $blue-water;
    color: white;
@@ -18,6 +17,7 @@
   display: flex;
   justify-content: space-between;
   flex-grow: 1;
+}
 
 .search-btn {
   background-color: #84C8AE;

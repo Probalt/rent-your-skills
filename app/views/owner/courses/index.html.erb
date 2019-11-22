@@ -2,7 +2,7 @@
   <div class="d-flex owner-dashboard">
 
     <div class="sidebar col-2 bg-black">
-      <%= image_tag @user.avatar %>
+      <%= cl_image_tag @user.avatar %>
       <h3><%= @user.username %></h3>
     </div>
 
