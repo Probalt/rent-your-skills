@@ -1,37 +1,54 @@
-<div class="contenu">
-  <div class="d-flex">
-    <h1 class="flex-grow-1">All courses available</h1>
-    <%= link_to "Your Bookings", bookings_path, :class => "btn p-3 m-3 button btn-secondary" %>
-  </div>
+<div class="d-flex mt-0">
 
-  <%= form_tag courses_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a course aroud you"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
+  <div class="contenu m-2">
 
-  <div class="d-flex owner-dashboard">
-    <div class="info-content pl-2 pr-2">
-      <div class="cards">
-        <% @courses.each do |course| %>
-          <% if (course.participants - course.bookings.length) != 0 %>
-            <div class="card-courses" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))"> <%= cl_image_tag course.photo, crop: :fit %>
-              <%= link_to course_path(course) do %>
-                <h2><%= course.title %></h2>
-              <% end %>
-            </div>
-            <% end %>
-          <% end %>
-      </div>
+    <div class="d-flex m-4">
+      <h1 class="flex-grow-1">All courses available</h1>
+      <%= link_to "Your Bookings", bookings_path, :class => "btn p-3 m-3 button btn-secondary" %>
     </div>
+
+    <div class="search-input m-3">
+      <%= form_tag courses_path, method: :get do %>
+        <%= text_field_tag :query,
+        params[:query],
+        class: "form-control mb-2",
+        placeholder: "Find a course aroud you"%>
+        <%= submit_tag "Search", class: "search-btn mb-4" %>
+      <% end %>
+    </div>
+
+
+    <div class="d-flex">
+
+      <div class="d-flex owner-dashboard">
+        <div class="info-content pl-2 pr-2">
+          <div class="cards">
+            <% @courses.each do |course| %>
+              <% if (course.participants - course.bookings.length) != 0 %>
+                  <%= link_to course_path(course) do %>
+                    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">
+                      <%= cl_image_tag course.photo, crop: :fit %>
+                      <h2><%= course.title %></h2>
+                    </div>
+                  <% end %>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
   </div>
-  <br>
+
+  <div id="map"
+       style="width: 50%; height: 100vh; border-left: 1px solid #EC6C58"
+       data-markers="<%= @markers.to_json %>"
+       data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+
 </div>
-<div    id="map"
-        style="width: 50%; height: 400px;"
-        data-markers="<%= @markers.to_json %>"
-        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
+
+
+
+

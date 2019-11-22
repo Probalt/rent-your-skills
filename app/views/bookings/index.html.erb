@@ -11,11 +11,11 @@
   <div class="info-content pl-2 pr-2">
     <div class="cards">
       <% @bookings.each do |booking| %>
-      <div class="card-courses" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))"> <%= cl_image_tag booking.course.photo, crop: :fit %>
         <%= link_to course_booking_path(booking.course, booking) do %>
-          <h2><%= booking.course.title %></h2>
+          <div class="card-courses" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))"> <%= cl_image_tag booking.course.photo, crop: :fit %>
+            <h2><%= booking.course.title %></h2>
+          </div>
         <% end %>
-      </div>
       <% end %>
     </div>
   </div>
