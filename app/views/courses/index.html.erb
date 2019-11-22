@@ -1,6 +1,6 @@
 <div class="d-flex mt-0">
 
-  <div class="contenu m-2">
+  <div class="contenu m-2 flex-grow-1">
 
     <div class="d-flex m-4">
       <h1 class="flex-grow-1">All courses available</h1>
@@ -41,7 +41,7 @@
   </div>
 
   <div id="map"
-       style="width: 50%; height: 100vh; border-left: 1px solid #EC6C58"
+       style="width: 40%; height: 100vh; border-left: 1px solid #EC6C58"
        data-markers="<%= @markers.to_json %>"
        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
