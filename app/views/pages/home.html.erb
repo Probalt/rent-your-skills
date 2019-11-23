@@ -8,13 +8,14 @@
     <div class="container">
       <div class="search-block col-md-5 bg-white rounded p-4">
         <h2>Find a course !</h2>
-        <p>Choose your interest and share it with other people around you.</p>
+        <br>
+        <p>Enter a <u>skill</u> or a <u>city</u> :</p>
          <div class="search-bar">
           <%= form_tag courses_path, class: "form-banner", method: :get do %>
           <%= text_field_tag :query,
           params[:query],
           class: "form-control",
-          placeholder: "Find a course aroud you" %>
+          placeholder: "Type here" %>
           <br>
           <%= submit_tag "Search", class: "btn btn-primary button button-banner" %>
           <% end %>
@@ -25,9 +26,9 @@
   <div class="container banner-small mt-5 col-md-10">
     <div class="banner-small-content rounded" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80);">
     <h2>Find your talents and share it with others</h2>
-    <p>You are skilled in a field and you would like you share</p>
-    <p>your knowledge with other people ?</p>
-    <p>This is your chance ! </p>
+    <p>You want to learn new skills for cheap close to you?</p>
+    <p>You want to share your knowledge and earn extra cash?</p>
+    <p>Find people around you who will make this happen.</p>
     <%= link_to "Know more",  new_owner_course_path, class: "btn btn-primary button button-banner-small" %>
     </div>
   </div>
@@ -60,7 +61,7 @@
       <% @courses.each do |course| %>
         <% if (course.participants.to_i - course.bookings.length) <= 2 && (course.participants.to_i - course.bookings.length) > 0 %>
           <%= link_to course_path(course) do %>
-            <div class="card text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path course.photo, crop: :fit %>)">
+            <div class="card text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_tag course.photo, crop: :fit %>)">
               <div class="info">
                 <h1><%= course.title %></h1>
               </div>
