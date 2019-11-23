@@ -11,32 +11,25 @@ Booking.destroy_all
 User.destroy_all
 Course.destroy_all
 
-puts 'Creating user joe'
 User.create!(email: "joe@gmail.com", password: "azerty", username: "jojo", avatar: "https://img.icons8.com/color/1600/avatar.png")
-Course.create!(title: 'Cours de skate', description: 'Je compte faire deux heures de skate dimanche sur les quais et je propose de donner des cours pendant 1h', participants: 10, price: 3, duration: 60, address: 'Bordeaux, Quais des Chartrons', date: Time.now, user: User.first, photo: "https://images.unsplash.com/photo-1506411393232-79727bc447af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80(54 kB)
+Course.create!(title: 'Learn how to skate', description: 'I will practice 2 hours on sunday and I can teach a few people for one hour', participants: 10, price: 3, duration: 60, address: 'Bordeaux, Quais des Chartrons', date: Time.now, user: User.first, photo: "https://images.unsplash.com/photo-1506411393232-79727bc447af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80(54 kB)
 https://images.unsplash.com/photo-1506411393232-79727bc447af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80
 " )
-Course.create!(title: 'Cours de cuisine', description: 'Propose une initiation à la cuisin moléculaire', participants: 1, price: 4, duration: 120, address: 'Bordeaux, Quai Richelieu', date: Time.now, user: User.first, photo: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80(207 kB)
+Course.create!(title: 'Cooking class', description: 'I can show you guys how to cook french specialties like ratatouille', participants: 1, price: 4, duration: 120, address: 'Bordeaux, Quai Richelieu', date: Time.now, user: User.first, photo: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80(207 kB)
 https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80
 " )
-Course.create!(title: 'Faire sa propre lessive', description: 'Je vais faire ma lessive du mois, je vous propose de vous apprendre par la même occasion comment faire', participants: 8, price: 2, duration: 30, address: 'Bordeaux, Rue Sainte-Catherine', date: Time.now, user: User.first, photo: "https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg(123 kB)
+Course.create!(title: 'Eco laundry', description: 'I do myself my laundry prodcuts each month. I am running out of it, and am planning on making myself another pot. Anyone welcome to come and see how it is done! Very simple', participants: 8, price: 2, duration: 30, address: 'Bordeaux, Rue Sainte-Catherine', date: Time.now, user: User.first, photo: "https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg(123 kB)
 https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg
 " )
-Course.create!(title: 'Cours de salsa', description: 'Je propose de vous montrez les bases de la Salsa.', participants: 4, price: 2, duration: 30, address: 'Bordeaux, Rue Sainte-Catherine', date: Time.now, user: User.first, photo: "https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg(123 kB)
+Course.create!(title: 'Salsa Dance', description: 'I am a salsa fan and I offer you some tips on Saturday', participants: 4, price: 2, duration: 30, address: 'Bordeaux, Rue Sainte-Catherine', date: Time.now, user: User.first, photo: "https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg(123 kB)
 https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg
 " )
-Course.create!(title: 'Cours de guitare', description: 'Apprenez les bases de la guitare.', participants: 2, price: 5, duration: 60, address: 'Bordeaux, Rue Sainte-Catherine', date: Time.now, user: User.first, photo: "https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg(123 kB)
+Course.create!(title: 'Guitar basics', description: 'Learn with me few easy songs at the guitar', participants: 2, price: 5, duration: 60, address: 'Bordeaux, Rue Sainte-Catherine', date: Time.now, user: User.first, photo: "https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg(123 kB)
 https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg
 " )
-Course.create!(title: 'Cours de photos', description: 'Apprendre à se servir de son reflex.', participants: 2, price: 10, duration: 65, address: 'Bordeaux, Rue Sainte-Catherine', date: Time.now, user: User.first, photo: "https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg(123 kB)
+Course.create!(title: 'Photography class', description: 'Learn with me how to use a Nikon camera', participants: 2, price: 10, duration: 65, address: 'Bordeaux, Rue Sainte-Catherine', date: Time.now, user: User.first, photo: "https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg(123 kB)
 https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg
 " )
-
-
-puts 'Creating courses'
-Course.create!(title: 'Cours de skate', description: 'Je compte faire deux heures de skate dimanche sur les quais et je propose de donner des cours pendant 1h', participants: 10, price: 3, duration: 60, address: 'Bordeaux, Quais des Chartrons', date: Time.now, user: User.first, photo: "https://images.unsplash.com/photo-1506411393232-79727bc447af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" )
-Course.create!(title: 'Cours de cuisine', description: 'Propose une initiation à la cuisin moléculaire', participants: 1, price: 4, duration: 120, address: 'Bordeaux, Quai Richelieu', date: Time.now, user: User.first, image_url: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" )
-Course.create!(title: 'Faire sa propre lessive', description: 'Je vais faire ma lessive du mois, je vous propose de vous apprendre par la même occasion comment faire', participants: 8, price: 2, duration: 30, address: 'Bordeaux, Rue Sainte-Catherine', date: Time.now, user: User.first, image_url: "https://cdn.pixabay.com/photo/2017/08/06/09/14/people-2590564_960_720.jpg" )
 
 puts 'Finished!'
 
