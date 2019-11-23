@@ -14,7 +14,7 @@
       <div class="cards-index">
         <% @bookings.each do |booking| %>
           <%= link_to course_booking_path(booking.course, booking) do %>
-            <div class="card text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path booking.course.photo, crop: :fit %>')">
+            <div class="card text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_tag booking.course.photo, crop: :fit %>)">
               <div class="info">
                 <h1><%= booking.course.title %></h1>
                 <p> <%= booking.course.description %></p>
