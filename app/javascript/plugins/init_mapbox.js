@@ -21,7 +21,7 @@ const initMapbox = () => {
         const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
         const element = document.createElement('div');
         element.className = 'marker';
-        element.style.backgroundImage = `url('${marker.photo}')`;
+        // element.style.backgroundImage = `url('${marker.photo}')`;
         element.style.backgroundSize = 'contain';
         element.style.width = '25px';
         element.style.height = '25px';
@@ -32,7 +32,7 @@ const initMapbox = () => {
       } else {
         const element = document.createElement('div');
         element.className = 'marker';
-        element.style.backgroundImage = `url('${marker.photo}')`;
+        // element.style.backgroundImage = `url('${marker.photo}')`;
         element.style.backgroundSize = 'contain';
         element.style.width = '25px';
         element.style.height = '25px';
