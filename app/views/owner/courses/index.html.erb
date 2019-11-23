@@ -4,6 +4,11 @@
     <div class="sidebar col-2 bg-black">
       <%= cl_image_tag @user.avatar %>
       <h3><%= @user.username %></h3>
+      <br>
+      <%= link_to "Add a course", new_owner_course_path, class: "btn btn-primary button" %>
+      <br>
+      <br>
+      <%= link_to "View courses list", courses_path, class: "btn btn-secondary button" %>
     </div>
 
     <div class="info-content w-100 pl-2 pr-2">
@@ -23,11 +28,6 @@
           <% end %>
         <% end %>
       </div>
-        <div class="button-index">
-          <%= link_to "Add a course", new_owner_course_path, class: "btn btn-primary button" %>
-          <br>
-          <%= link_to "View courses list", courses_path, class: "btn btn-secondary button" %>
-        </div>
     </div>
 
   </div>
