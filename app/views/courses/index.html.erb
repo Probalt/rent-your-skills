@@ -26,7 +26,7 @@
             <% @courses.each do |course| %>
               <% if (course.participants.to_i - course.bookings.length) != 0 %>
                   <%= link_to course_path(course) do %>
-                    <div class="card text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_tag course.photo, crop: :fit %>)">
+                    <div class="card text-center" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path course.photo, crop: :fit %>)">
                       <div class="info">
                         <h1><%= course.title %></h1>
                         <p> <%= course.description %></p>
